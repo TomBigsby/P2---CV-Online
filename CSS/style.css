@@ -1,0 +1,322 @@
+@font-face {
+    /* font-family: 'Nunito', Arial, sans-serif; */
+    font-family: 'Roboto', 'Arial', sans-serif;
+}
+
+body {
+    display: flex;
+    margin: auto;
+    font-family: "Roboto", serif;
+    font-style: normal;
+    font-weight: 400;
+    color: black;
+
+}
+
+/* /// <--- VOLET LATERAL --- */
+
+
+aside {
+    background: linear-gradient(180deg, #F1A75A 0%, #F0775F 100%);
+    float: left;
+    width: 380px;
+
+    /* DEBUG */
+    display: none;
+}
+
+aside img {
+    padding: 30px;
+}
+
+.identite {
+    color: white;
+    text-align: center;
+    font-size: 28px;
+}
+
+.identite p:last-child {
+    font-size: 19px;
+}
+
+.intro {
+    text-align: justify;
+    background-color: #fff;
+    margin: 10px;
+    padding: 15px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+.intro p {
+    /* supprime les espaces top et bottom par defaut */
+    display: inline;
+}
+
+/* /// >--- VOLET LATERAL fin --- */
+
+/* /// <--- MAIN --- */
+
+/* /// <--- HEADER --- */
+
+main {
+    margin: 50px;
+}
+
+h2 {
+    margin: 0;
+}
+
+article {
+    margin-bottom: 50px;
+}
+
+.title h3 {
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+
+.name {
+    font-size: 60px;
+    color: #F1A65B;
+}
+
+.job {
+    font-size: 60px;
+    font-weight: 300;
+}
+
+.separateur {
+    height: 2px;
+    width: 400px;
+    background: #000;
+}
+
+#experience,
+#formations,
+#outils,
+#loisirs,
+#divers {
+    display: flex;
+    flex-direction: column;
+    margin-left: 100px;
+}
+
+.title-article {
+    display: flex;
+    flex-direction: row;
+
+    position: relative;
+}
+
+.title-article h3 {
+    color: #000;
+    font-size: 35px;
+    font-weight: 300;
+    margin: 15px 0 30px 0;
+}
+
+.picto {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    left: -70px;
+    top: 15px
+}
+
+.cercle {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+
+    background-color: #F1A65B;
+
+    border-radius: 50%;
+
+    z-index: 1;
+}
+.c1{
+    background-color: #F1A75A;
+}.c2{
+    background-color: #F09B5B;
+}.c3{
+    background-color: #F08F5C;
+}.c4{
+    background-color: #F0835D;
+}.c5{
+    background-color: #F0775F;
+}
+
+.picto img {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    z-index: 2;
+}
+
+.xp {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.year {
+    position: absolute;
+    left: -100px;
+    color: black;
+}
+
+.poste,
+.diplome {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 23px;
+    color: #F0755F;
+}
+
+.diplome strong {
+    font-weight: 700;
+}
+
+.groupe-ypt {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+
+    position: relative;
+}
+
+.time {
+    display: inline;
+    color: black;
+    padding: 4px 8px 4px 8px;
+    margin-left: 15px;
+    background: #F1A75A;
+    border-radius: 13px;
+    -webkit-border-radius: 13px;
+    -moz-border-radius: 13px;
+    -ms-border-radius: 13px;
+    -o-border-radius: 13px;
+
+    position: relative;
+    bottom: 3px;
+}
+
+.compagny,
+.school {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 21px;
+}
+
+.city {
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 21px;
+}
+
+.tasks {
+    font-size: 15px;
+    line-height: 18px;
+    text-align: justify;
+    color: #9C9C9C;
+
+    margin: 10px 0 15px 0;
+}
+
+/* /// <---  OUTILS  --- */
+
+.all-app {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.cat {
+    margin: 0 10px 0 0;
+}
+
+.tools-title {
+    background: #1182A2;
+    font-weight: 400;
+    font-size: 16px;
+    text-align: center;
+    padding: 6px;
+    align-items: center;
+    color: #FFFFFF;
+
+    margin-bottom: 6px;
+}
+
+.apps {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+
+    /* HACK  pour espace entre items sans espace sur extrémité  */
+    margin: 0 -5px;
+    margin-bottom: 20px;
+}
+
+.apps img {
+    /* HACK */
+    margin: 0 5px;
+}
+
+.hobbies {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    /* HACK */
+    margin: 0 -5px;
+
+}
+
+.hobby {
+    /* HACK */
+    margin: 0 5px;
+    margin-bottom: 20px;
+}
+
+.hobby-name {
+    text-align: center;
+    margin-top: 4px;
+}
+
+.misc {
+    display: flex;
+    flex-direction: row;
+}
+
+.language {
+    display: flex;
+    flex-direction: row;
+
+  margin-right: 40px;
+}
+
+.language-name {
+    width: 90px;
+    text-align: center;
+    font-weight: 300;
+
+    display: flex;
+    flex-direction: column;
+    align-items: space-around;
+
+    justify-content: center;
+}
+
+.language-name strong{
+    font-size: 35px;
+}
+
+.fa-camera{
+    color: black;
+}
