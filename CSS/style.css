@@ -4,7 +4,11 @@
 }
 
 body {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    flex-direction: row;
+
     margin: auto;
     font-family: "Roboto", serif;
     font-style: normal;
@@ -17,33 +21,53 @@ body {
 
 
 aside {
+    background: -webkit-gradient(linear, left top, left bottom, from(#F1A75A), to(#F0775F));
     background: linear-gradient(180deg, #F1A75A 0%, #F0775F 100%);
-    float: left;
     width: 380px;
+    padding: 30px;
 
-    /* DEBUG */
-    display: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    /* DEBUG  Masque la barre latérale  */
+    /*    display: none;*/
 }
 
 aside img {
-    padding: 30px;
+    border-radius: 50%;
 }
 
 .identite {
     color: white;
     text-align: center;
-    font-size: 28px;
+    font-size: 27px;
 }
 
 .identite p:last-child {
     font-size: 19px;
 }
 
+.identite a:link,
+.identite a:visited {
+    text-decoration: none;
+    color: white;
+}
+
+.identite a:hover {
+    background-color: #1182A2;
+
+    /*    color: black;*/
+    border-radius: 6px;
+}
+
 .intro {
     text-align: justify;
-    background-color: #fff;
-    margin: 10px;
+    background-color: rgba(255, 255, 255, 0.35);
+
     padding: 15px;
+    margin-top: 30px;
+
     border-radius: 10px;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
@@ -52,15 +76,15 @@ aside img {
 }
 
 .intro p {
-    /* supprime les espaces top et bottom par defaut */
+    /* supprime les espaces top et bottom par defaut du <p> */
     display: inline;
 }
 
-/* /// >--- VOLET LATERAL fin --- */
+/* <------ VOLET LATERAL  ------ */
 
-/* /// <--- MAIN --- */
+/* <------ MAIN --- */
 
-/* /// <--- HEADER --- */
+/* <------ HEADER ------ */
 
 main {
     margin: 50px;
@@ -70,14 +94,15 @@ h2 {
     margin: 0;
 }
 
-article {
-    margin-bottom: 50px;
+.title {
+    margin-left: 100px;
 }
 
 .title h3 {
     font-weight: 400;
     margin-bottom: 10px;
 }
+
 
 .name {
     font-size: 60px;
@@ -90,9 +115,17 @@ article {
 }
 
 .separateur {
-    height: 2px;
-    width: 400px;
-    background: #000;
+    height: 3px;
+    width: 540px;
+    background: #F1A65B;
+
+    margin: 50px 0 50px 100px;
+}
+
+/* >------ HEADER ------ */
+
+article {
+    margin-bottom: 50px;
 }
 
 #experience,
@@ -100,13 +133,23 @@ article {
 #outils,
 #loisirs,
 #divers {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
     margin-left: 100px;
 }
 
 .title-article {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
     flex-direction: row;
 
     position: relative;
@@ -121,8 +164,14 @@ article {
 
 .picto {
     position: absolute;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
 
     left: -70px;
@@ -140,18 +189,36 @@ article {
 
     z-index: 1;
 }
-.c1{
+
+/*  NOTE: Attribution des couleurs dégraddées à chaque cerlcle picto*/
+.c1 {
     background-color: #F1A75A;
-}.c2{
+}
+
+.c2 {
     background-color: #F09B5B;
-}.c3{
+}
+
+.c3 {
     background-color: #F08F5C;
-}.c4{
+}
+
+.c4 {
     background-color: #F0835D;
-}.c5{
+}
+
+.c5 {
     background-color: #F0775F;
 }
 
+
+/* NOTE: Picto Font Awesome toujours au dessus du cercle*/
+.fa {
+    z-index: 2;
+    color: white;
+}
+
+/*NOTE:  Pictos > alternative avec fichiers images svg*/
 .picto img {
     position: relative;
     width: 40px;
@@ -159,8 +226,15 @@ article {
     z-index: 2;
 }
 
+
+
 .xp {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
     margin-bottom: 10px;
 }
@@ -170,6 +244,13 @@ article {
     left: -100px;
     color: black;
 }
+
+/* DEBUG: adapter le 2004-2020 sur 2 lignes (width)*/
+/*
+.year:nth-child(2) {
+    background-color: aqua;
+}
+*/
 
 .poste,
 .diplome {
@@ -185,8 +266,15 @@ article {
 }
 
 .groupe-ypt {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
     flex-direction: row;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
     justify-content: flex-start;
 
     position: relative;
@@ -233,7 +321,12 @@ article {
 /* /// <---  OUTILS  --- */
 
 .all-app {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: row wrap;
     flex-flow: row wrap;
 }
 
@@ -242,11 +335,13 @@ article {
 }
 
 .tools-title {
-    background: #1182A2;
+    background-color: #1182A2;
     font-weight: 400;
     font-size: 16px;
     text-align: center;
     padding: 6px;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     color: #FFFFFF;
 
@@ -254,8 +349,15 @@ article {
 }
 
 .apps {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: row nowrap;
     flex-flow: row nowrap;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
 
     /* HACK  pour espace entre items sans espace sur extrémité  */
@@ -269,8 +371,14 @@ article {
 }
 
 .hobbies {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
     flex-direction: row;
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
 
     /* HACK */
@@ -290,15 +398,25 @@ article {
 }
 
 .misc {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
     flex-direction: row;
 }
 
 .language {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
     flex-direction: row;
 
-  margin-right: 40px;
+    margin-right: 40px;
 }
 
 .language-name {
@@ -306,17 +424,29 @@ article {
     text-align: center;
     font-weight: 300;
 
+    display: -webkit-box;
+
+    display: -ms-flexbox;
+
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
+    -webkit-box-align: space-around;
+    -ms-flex-align: space-around;
     align-items: space-around;
+
+    -webkit-box-pack: center;
+
+    -ms-flex-pack: center;
 
     justify-content: center;
 }
 
-.language-name strong{
+.language-name strong {
     font-size: 35px;
 }
 
-.fa-camera{
-    color: black;
-}
+
+/* >------ MAIN --- */

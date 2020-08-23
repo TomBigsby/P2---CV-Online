@@ -11,22 +11,21 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="CSS/style.css">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,700;1,400&family=Roboto:wght@300;400;700&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
-        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,700;1,400&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+<!--    TODO: a supprimer si OK FA v5-->
+    <!--    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">-->
+    <script src="https://kit.fontawesome.com/7cfecc5119.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
     <aside>
-        <!-- FIXME : Changer image par jpg carrée -->
-        <img src="images/Portrait-TK.png" alt="Photo Thomas">
+        <!-- FIXME: Changer image par jpg carrée -->
+        <img src="images/Portrait-TK.jpg" alt="Photo Thomas">
         <div class="identite">
             <p>Bretagne</p>
             <p><strong>06 00 00 00 00</strong></p>
             <p> <a href="mailto:t.karchesz@gmail.com">t.karchesz@gmail.com</a></p>
-            <p> <a href="https://www.linkedin.com/in/thomaskarchesz">linkedin.com/in/thomaskarchesz/</a></p>
+            <p> <a href="https://www.linkedin.com/in/thomaskarchesz" target="_blank">linkedin.com/in/thomaskarchesz</a></p>
         </div>
         <div class="intro">
             <p>Polyvalent et flexible, je souhaite apporter mes compétences à votre entreprise tout en poursuivant ma
@@ -35,7 +34,7 @@
         </div>
     </aside>
     <main>
-        <div>
+        <div class="title">
             <h2 class="name">Thomas KARCHESZ</h2>
             <h2 class="job">DEVELOPPEUR WEB</h2>
         </div>
@@ -44,7 +43,10 @@
             <div class="title-article">
                 <div class="picto">
                     <div class="cercle c1"></div>
-                    <img src="images/picto-XP.svg" alt="picto expérience">
+
+                    <i class="fa fa-briefcase fa-2x" aria-hidden="true"></i>
+
+                    <!--   <img src="images/picto-XP.svg" alt="picto expérience">-->
                 </div>
                 <h3>EXPERIENCE PROFESSIONNELLE</h3>
             </div>
@@ -119,7 +121,8 @@
             <div class="title-article">
                 <div class="picto">
                     <div class="cercle c2"></div>
-                    <img src="images/picto-formation.svg" alt="picto formation">
+                    <i class="fa fa-graduation-cap fa-2x" aria-hidden="true"></i>
+                    <!-- <img src="images/picto-formation.svg" alt="picto formation">-->
                 </div>
                 <h3>FORMATIONS / DIPLÔMES</h3>
             </div>
@@ -191,10 +194,9 @@
             <div class="title-article">
                 <div class="picto">
                     <div class="cercle c3"></div>
-                    <!-- FIXME: choisir SVG ou import FA -->
-                    <div><i class="fas fa-camera"></i></div>
+                    <!--   FIXME: le picto n'apprait plus-->
+                    <i class="fa fa-tools fa-2x"></i>
                     <!-- <img src="images/picto-outils.svg" alt="picto outils"> -->
-                    <!-- <i class="icone fa fa-line-chart fa-2x"></i> -->
                 </div>
                 <h3>OUTILS</h3>
             </div>
@@ -260,7 +262,8 @@
             <div class="title-article">
                 <div class="picto">
                     <div class="cercle c4"></div>
-                    <img src="images/picto-Loisirs.svg" alt="picto loisirs">
+                    <i class="fa fa-gamepad fa-2x"></i>
+                    <!--                    <img src="images/picto-Loisirs.svg" alt="picto loisirs">-->
                 </div>
                 <h3>LOISIRS</h3>
             </div>
@@ -292,7 +295,7 @@
             <div class="title-article">
                 <div class="picto">
                     <div class="cercle c5"></div>
-                    <img src="images/picto-divers.svg" alt="picto divers">
+                    <div><img src="images/picto-divers.svg" alt="picto divers"></div>
                 </div>
                 <h3>DIVERS</h3>
             </div>
