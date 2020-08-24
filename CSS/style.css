@@ -4,21 +4,19 @@
 }
 
 body {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    flex-direction: row;
-
-    margin: auto;
+    /*NOTE:  pour compenser la largeur du padding des 2 cotés*/
+    width: calc(100% - 60px);
+    margin: 0;
     font-family: "Roboto", serif;
     font-style: normal;
     font-weight: 400;
     color: black;
-
+    /**/
+    display: flex;
+    flex-direction: row;
 }
 
-/* /// <--- VOLET LATERAL --- */
-
+/*  <--- VOLET LATERAL --- */
 
 aside {
     background: -webkit-gradient(linear, left top, left bottom, from(#F1A75A), to(#F0775F));
@@ -29,6 +27,7 @@ aside {
     display: flex;
     flex-direction: column;
     align-items: center;
+
 
     /* DEBUG  Masque la barre latérale  */
     /*    display: none;*/
@@ -54,11 +53,28 @@ aside img {
     color: white;
 }
 
+
 .identite a:hover {
     background-color: #1182A2;
 
-    /*    color: black;*/
     border-radius: 6px;
+
+    -webkit-transition: background 0.5s ease;
+    -moz-transition: background 0.5s ease;
+    -ms-transition: background 0.5s ease;
+    -o-transition: background 0.5s ease;
+    transition: background 0.5s ease;
+}
+
+/*NOTE: Hover off */
+.identite a {
+    background-color: transparent;
+
+    -webkit-transition: background 0.5s ease;
+    -moz-transition: background 0.5s ease;
+    -ms-transition: background 0.5s ease;
+    -o-transition: background 0.5s ease;
+    transition: background 0.5s ease;
 }
 
 .intro {
@@ -80,15 +96,13 @@ aside img {
     display: inline;
 }
 
-/* <------ VOLET LATERAL  ------ */
+/* >------ VOLET LATERAL  ------ */
 
-/* <------ MAIN --- */
 
 /* <------ HEADER ------ */
 
-main {
-    margin: 50px;
-}
+header {}
+
 
 h2 {
     margin: 0;
@@ -124,9 +138,44 @@ h2 {
 
 /* >------ HEADER ------ */
 
+/* <------ MAIN --- */
+
+main {
+    margin: 50px;
+}
+
 article {
     margin-bottom: 50px;
 }
+
+/* <------  filets dates  */
+
+.filet-vertical {
+    width: 3px;
+    height: 137px;
+    left: -55px;
+    top: -125px;
+    background-color: #9C9C9C;
+    position: absolute;
+
+}
+
+#experience section:nth-child(2) .filet-vertical,
+#formations section:nth-child(2) .filet-vertical {
+    height: 80px;
+    top: -68px;
+}
+
+.filet-horizontal {
+    width: 50px;
+    height: 3px;
+    background-color: #9C9C9C;
+    position: absolute;
+    left: -55px;
+    top: 9px;
+}
+
+/* >------  filets dates  */
 
 #experience,
 #formations,
@@ -142,6 +191,8 @@ article {
     flex-direction: column;
     margin-left: 100px;
 }
+
+/*  <------  XP / FORMATIONS  --- */
 
 .title-article {
     display: -webkit-box;
@@ -174,7 +225,8 @@ article {
     -ms-flex-align: center;
     align-items: center;
 
-    left: -70px;
+    width: 60px;
+    left: -84px;
     top: 15px
 }
 
@@ -226,9 +278,8 @@ article {
     z-index: 2;
 }
 
-
-
-.xp {
+.xp,
+.formation {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -245,12 +296,10 @@ article {
     color: black;
 }
 
-/* DEBUG: adapter le 2004-2020 sur 2 lignes (width)*/
-/*
-.year:nth-child(2) {
-    background-color: aqua;
+/* NOTE: met le "2004 2020" sur 2 lignes (width)*/
+#formations section:nth-child(3) .year {
+    width: 50px;
 }
-*/
 
 .poste,
 .diplome {
@@ -318,7 +367,9 @@ article {
     margin: 10px 0 15px 0;
 }
 
-/* /// <---  OUTILS  --- */
+/*  >------  XP / FORMATIONS  --- */
+
+/*  <------  OUTILS  --- */
 
 .all-app {
     display: -webkit-box;
@@ -370,6 +421,10 @@ article {
     margin: 0 5px;
 }
 
+/*  >------  OUTILS  --- */
+
+/*  <------  LOISIRS  --- */
+
 .hobbies {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -396,6 +451,10 @@ article {
     text-align: center;
     margin-top: 4px;
 }
+
+/*  >------  LOISIRS  --- */
+
+/*  <------  DIVERS  --- */
 
 .misc {
     display: -webkit-box;
@@ -448,5 +507,44 @@ article {
     font-size: 35px;
 }
 
+/* >------  DIVERS  --- */
 
 /* >------ MAIN --- */
+
+
+/* ----  / MEDIA QUERIES ----*/
+
+/* Destop */
+
+@media all and (max-width: 1024px) {}
+
+/* Tablette */
+
+@media all and (max-width: 729px) {
+    body {
+        display: flex;
+        flex-direction: column;
+    }
+
+    aside {
+        /*        order: 2;*/
+        width: 100%;
+        display: flex;
+        align-items: center;
+    }
+
+    header {
+        /*        order: 1;*/
+        display: flex;
+        top: 0;
+    }
+
+    main {
+        /*        order: 3;*/
+    }
+
+}
+
+/* Mobile */
+
+@media all and (max-width: 480px) {}
