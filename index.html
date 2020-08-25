@@ -12,14 +12,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="CSS/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,700;1,400&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-    <!--    TODO: a supprimer si OK FA v5-->
-    <!--    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">-->
     <script src="https://kit.fontawesome.com/7cfecc5119.js" crossorigin="anonymous"></script>
+
+    <!--    DEBUG  a supprimer -->
+    <link rel="stylesheet" href="style-mq.css">
+
 </head>
 
 <body>
+    <!--  DEBUG: à supprimer-->
+    <div class="debug"></div>
     <aside>
-        <!-- FIXME: Changer image par jpg carrée -->
+        <div class="header-mobile">
+            <h2 class="name-mob">Thomas KARCHESZ</h2>
+            <h2 class="job-mob">DEVELOPPEUR WEB</h2>
+        </div>
         <img src="images/Portrait-TK.jpg" alt="Photo Thomas">
         <div class="identite">
             <p>Bretagne</p>
@@ -33,7 +40,6 @@
                 supplémentaire. Je suis quelqu’un de fiable et ouvert d’esprit. </p>
         </div>
     </aside>
-
     <main>
         <header>
             <div class="title">
@@ -46,15 +52,29 @@
             <div class="title-article">
                 <div class="picto">
                     <div class="cercle c1"></div>
-
                     <i class="fa fa-briefcase fa-2x" aria-hidden="true"></i>
-
                     <!--   <img src="images/picto-XP.svg" alt="picto expérience">-->
                 </div>
                 <h3>EXPERIENCE PROFESSIONNELLE</h3>
             </div>
             <section class="xp">
-
+                <div class="groupe-ypt">
+                    <div class="filet-vertical"></div>
+                    <div class="filet-horizontal"></div>
+                    <div class="year">2020</div>
+                    <div class="poste">DÉVELOPPEUR WEB</div>
+                    <div class="time">1 mois</div>
+                </div>
+                <div class="compagny">LC DESIGN - <span class="city">LORIENT (56)</span></div>
+                <div class="tasks">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et tortor, ultrices odio
+                    fermentum potenti felis cursus ut pulvinar. Nascetur sed lacus, est, pretium eu, semper
+                    orci.
+                    Pellentesque ac convallis tortor parturient morbi quis eget. Sapien risus quisque enim magna
+                    congue.
+                </div>
+            </section>
+            <section class="xp">
                 <div class="groupe-ypt">
                     <div class="filet-vertical"></div>
                     <div class="filet-horizontal"></div>
@@ -208,15 +228,11 @@
                     Pellentesque ac convallis tortor parturient morbi quis eget. Sapien risus quisque enim magna
                     congue.</div>
             </section>
-
         </article>
-
-
         <article id="outils">
             <div class="title-article">
                 <div class="picto">
                     <div class="cercle c3"></div>
-                    <!--   FIXME: le picto n'apprait plus-->
                     <i class="fa fa-tools fa-2x"></i>
                     <!-- <img src="images/picto-outils.svg" alt="picto outils"> -->
                 </div>
@@ -338,4 +354,6 @@
             </div>
         </article>
     </main>
-</body></html>|
+</body>
+
+</html>

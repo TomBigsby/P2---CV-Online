@@ -11,7 +11,6 @@ body {
     font-style: normal;
     font-weight: 400;
     color: black;
-    /**/
     display: flex;
     flex-direction: row;
 }
@@ -27,6 +26,7 @@ aside {
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-align: center;
 
 
     /* DEBUG  Masque la barre latérale  */
@@ -53,30 +53,6 @@ aside img {
     color: white;
 }
 
-
-.identite a:hover {
-    background-color: #1182A2;
-
-    border-radius: 6px;
-
-    -webkit-transition: background 0.5s ease;
-    -moz-transition: background 0.5s ease;
-    -ms-transition: background 0.5s ease;
-    -o-transition: background 0.5s ease;
-    transition: background 0.5s ease;
-}
-
-/*NOTE: Hover off */
-.identite a {
-    background-color: transparent;
-
-    -webkit-transition: background 0.5s ease;
-    -moz-transition: background 0.5s ease;
-    -ms-transition: background 0.5s ease;
-    -o-transition: background 0.5s ease;
-    transition: background 0.5s ease;
-}
-
 .intro {
     text-align: justify;
     background-color: rgba(255, 255, 255, 0.35);
@@ -101,8 +77,13 @@ aside img {
 
 /* <------ HEADER ------ */
 
-header {}
 
+
+/* NOTE: Header version mobile placé avant la photo*/
+.header-mobile {
+    margin-bottom: 35px;
+    display: none;
+}
 
 h2 {
     margin: 0;
@@ -128,6 +109,18 @@ h2 {
     font-weight: 300;
 }
 
+.name-mob {
+    font-size: 28px;
+    color: white;
+    margin-bottom: 8px;
+}
+
+.job-mob {
+    font-size: 28px;
+    font-weight: 300;
+}
+
+
 .separateur {
     height: 3px;
     width: 540px;
@@ -141,41 +134,22 @@ h2 {
 /* <------ MAIN --- */
 
 main {
-    margin: 50px;
+    margin: 30px;
 }
 
+/*NOTE: espaces entre articles*/
 article {
     margin-bottom: 50px;
 }
 
-/* <------  filets dates  */
-
-.filet-vertical {
-    width: 3px;
-    height: 137px;
-    left: -55px;
-    top: -125px;
-    background-color: #9C9C9C;
-    position: absolute;
-
-}
-
-#experience section:nth-child(2) .filet-vertical,
-#formations section:nth-child(2) .filet-vertical {
-    height: 80px;
-    top: -68px;
-}
-
 .filet-horizontal {
-    width: 50px;
+    width: 15px;
     height: 3px;
     background-color: #9C9C9C;
     position: absolute;
-    left: -55px;
+    left: -20px;
     top: 9px;
 }
-
-/* >------  filets dates  */
 
 #experience,
 #formations,
@@ -226,7 +200,7 @@ article {
     align-items: center;
 
     width: 60px;
-    left: -84px;
+    left: -75px;
     top: 15px
 }
 
@@ -290,9 +264,17 @@ article {
     margin-bottom: 10px;
 }
 
+/*FIXME Mettre fond transparent ou supprimer*/
+/*
+.xp:nth-child(2) {
+    background-color: #1182A2;
+    padding: 5px;
+}
+*/
+
 .year {
     position: absolute;
-    left: -100px;
+    left: -63px;
     color: black;
 }
 
@@ -464,18 +446,14 @@ article {
     -webkit-box-direction: normal;
     -ms-flex-direction: row;
     flex-direction: row;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
 }
 
 .language {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: row;
-    flex-direction: row;
-
     margin-right: 40px;
+    margin-bottom: 20px;
 }
 
 .language-name {
@@ -512,39 +490,126 @@ article {
 /* >------ MAIN --- */
 
 
-/* ----  / MEDIA QUERIES ----*/
+/* <------  MEDIA QUERIES ----*/
 
 /* Destop */
 
-@media all and (max-width: 1024px) {}
+@media all and (min-width: 1024px) {
+    .filet-vertical {
+        display: block;
+    }
+
+    .identite a:hover {
+        background-color: #1182A2;
+
+        border-radius: 6px;
+
+        -webkit-transition: background 0.5s ease;
+        -moz-transition: background 0.5s ease;
+        -ms-transition: background 0.5s ease;
+        -o-transition: background 0.5s ease;
+        transition: background 0.5s ease;
+    }
+
+    /*NOTE: Hover off */
+    .identite a {
+        background-color: transparent;
+
+        -webkit-transition: background 0.5s ease;
+        -moz-transition: background 0.5s ease;
+        -ms-transition: background 0.5s ease;
+        -o-transition: background 0.5s ease;
+        transition: background 0.5s ease;
+    }
+
+    aside img {
+        width: 250px;
+    }
+
+    .picto {
+        display: inherit;
+    }
+
+}
 
 /* Tablette */
 
-@media all and (max-width: 729px) {
+@media all and (max-width: 1024px) {
+    main {
+        margin: 20px;
+    }
+
+    aside {
+        width: 300px;
+        padding: 20px;
+    }
+
+    aside img {
+        width: 200px;
+    }
+
+
+    .identite {
+        font-size: 22px;
+    }
+
+    .identite p:last-child {
+        font-size: 15px;
+    }
+
+    .year {
+        left: -63px;
+    }
+}
+
+/* Mobile */
+
+@media all and (max-width: 480px) {
     body {
         display: flex;
         flex-direction: column;
     }
 
+    .header-mobile {
+        margin-bottom: 35px;
+        display: block;
+    }
+
+    .filet-vertical {
+        display: none;
+    }
+
+    .filet-horizontal {
+        display: none;
+    }
+
     aside {
-        /*        order: 2;*/
         width: 100%;
         display: flex;
         align-items: center;
     }
 
     header {
-        /*        order: 1;*/
-        display: flex;
-        top: 0;
+        display: none;
     }
 
     main {
-        /*        order: 3;*/
+        margin: 5px;
     }
 
+    .picto {
+        display: none;
+    }
+
+    .year {
+        left: -50px;
+    }
+
+    #experience,
+    #formations,
+    #outils,
+    #loisirs,
+    #divers {
+        margin-left: 60px;
+    }
 }
-
-/* Mobile */
-
-@media all and (max-width: 480px) {}
