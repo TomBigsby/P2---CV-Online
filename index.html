@@ -13,15 +13,9 @@
     <link rel="stylesheet" href="CSS/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,700;1,400&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/7cfecc5119.js" crossorigin="anonymous"></script>
-
-    <!--    DEBUG  a supprimer -->
-    <link rel="stylesheet" href="style-mq.css">
-
 </head>
 
 <body>
-    <!--  DEBUG: à supprimer-->
-    <div class="debug"></div>
     <aside>
         <div class="header-mobile">
             <h2 class="name-mob">Thomas KARCHESZ</h2>
@@ -31,8 +25,17 @@
         <div class="identite">
             <p>Bretagne</p>
             <p><strong>06 00 00 00 00</strong></p>
-            <p> <a href="mailto:t.karchesz@gmail.com">t.karchesz@gmail.com</a></p>
-            <p> <a href="https://www.linkedin.com/in/thomaskarchesz" target="_blank">linkedin.com/in/thomaskarchesz</a></p>
+            <div class="mail"><a href="mailto:t.karchesz@gmail.com">t.karchesz@gmail.com</a>
+            </div>
+
+            <div class="linkedin"><a href="https://www.linkedin.com/in/thomaskarchesz" target="_blank">linkedin.com/in/thomaskarchesz</a></div>
+
+            <!--  NOTE: icone pour version Mobile-->
+            <div class="contact-mob">
+                <div class="mail-mob"> <a href="mailto:t.karchesz@gmail.com"><i class="fas fa-envelope fa-2x"></i></a></div>
+
+                <div class="linkedin-mob"><a href="https://www.linkedin.com/in/thomaskarchesz" target="_blank"><i class="fab fa-linkedin fa-2x"></i> </a></div>
+            </div>
         </div>
         <div class="intro">
             <p>Polyvalent et flexible, je souhaite apporter mes compétences à votre entreprise tout en poursuivant ma
@@ -353,7 +356,33 @@
                 </div>
             </div>
         </article>
-    </main>
-</body>
 
-</html>
+        <article id="recommandations">
+            <div class="title-article">
+                <div class="picto">
+                    <div class="cercle c5"></div>
+
+                    <i class="fa fa-pen fa-2x"></i>
+                </div>
+                <h3>RECOMMANDATIONS</h3>
+            </div>
+
+            <div class="recos">
+                <div class="reco1">
+                    <p><strong>Simon MARTIN</strong></p>
+                    <p>Dirigeant Groupe MORBIHAN AUTO</p>
+                    <p>Tel : 06 00 00 00 00</p>
+                    <p>email : name@email.com</p>
+                </div>
+                <div class="reco2">
+                    <p><strong>Jean DURAND</strong></p>
+                    <p>Directeur Le Hall Informatique</p>
+                    <p>Tel : 06 00 00 00 00</p>
+                    <p>email : name@email.com</p>
+                </div>
+            </div>
+
+
+        </article>
+    </main>
+</body></html>

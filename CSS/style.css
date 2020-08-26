@@ -5,7 +5,7 @@
 
 body {
     /*NOTE:  pour compenser la largeur du padding des 2 cotés*/
-    width: calc(100% - 60px);
+    width: calc(100% - 40px);
     margin: 0;
     font-family: "Roboto", serif;
     font-style: normal;
@@ -37,20 +37,45 @@ aside img {
     border-radius: 50%;
 }
 
+
+
 .identite {
     color: white;
     text-align: center;
     font-size: 27px;
 }
 
-.identite p:last-child {
+.linkedin {
+    margin-top: 25px;
+}
+
+.linkedin {
     font-size: 19px;
 }
+
 
 .identite a:link,
 .identite a:visited {
     text-decoration: none;
     color: white;
+}
+
+/*NOTE: Affichage des icones en mode Desktop */
+.mail-mob,
+.linkedin-mob {
+    display: none;
+}
+
+.mail,
+.linkedin {
+    display: block;
+}
+
+.contact-mob {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 .intro {
@@ -70,6 +95,7 @@ aside img {
 .intro p {
     /* supprime les espaces top et bottom par defaut du <p> */
     display: inline;
+    font-size: 16px;
 }
 
 /* >------ VOLET LATERAL  ------ */
@@ -81,8 +107,12 @@ aside img {
 
 /* NOTE: Header version mobile placé avant la photo*/
 .header-mobile {
-    margin-bottom: 35px;
     display: none;
+}
+
+.header-mobile h2 {
+    margin-bottom: 15px;
+    font-size: 35px;
 }
 
 h2 {
@@ -155,7 +185,8 @@ article {
 #formations,
 #outils,
 #loisirs,
-#divers {
+#divers,
+#recommandations {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -452,7 +483,7 @@ article {
 
 .language {
     display: flex;
-    margin-right: 40px;
+    margin-right: 35px;
     margin-bottom: 20px;
 }
 
@@ -483,6 +514,20 @@ article {
 
 .language-name strong {
     font-size: 35px;
+}
+
+.recos {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    font-size: 18px;
+}
+
+.reco1 {
+    margin-right: 90px;
+    margin-bottom: 30px;
+
 }
 
 /* >------  DIVERS  --- */
@@ -526,6 +571,20 @@ article {
         width: 250px;
     }
 
+    .mail-mob,
+    .linkedin-mob {
+        display: none;
+    }
+
+    .mail,
+    .linkedin {
+        display: block;
+    }
+
+    .intro p {
+        font-size: 16px;
+    }
+
     .picto {
         display: inherit;
     }
@@ -535,6 +594,11 @@ article {
 /* Tablette */
 
 @media all and (max-width: 1024px) {
+
+    .intro p {
+        font-size: 16px;
+    }
+
     main {
         margin: 20px;
     }
@@ -589,6 +653,24 @@ article {
         align-items: center;
     }
 
+    .identite {
+        font-size: 30px;
+    }
+
+    .mail-mob,
+    .linkedin-mob {
+        display: block;
+    }
+
+    .mail,
+    .linkedin {
+        display: none;
+    }
+
+    .intro p {
+        font-size: 18px;
+    }
+
     header {
         display: none;
     }
@@ -609,7 +691,9 @@ article {
     #formations,
     #outils,
     #loisirs,
-    #divers {
+    #divers,
+    #recommandations {
         margin-left: 60px;
     }
+
 }
