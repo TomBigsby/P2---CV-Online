@@ -21,6 +21,7 @@ body {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
     -ms-flex-direction: row;
+    -ms-flex-direction: row;
 }
 
 /*  <--- VOLET LATERAL --- */
@@ -36,8 +37,7 @@ aside {
 
     text-align: center;
 
-    background: -webkit-gradient(linear, left top, left bottom, from(#f1a75a), to(#f0775f));
-    background: linear-gradient(180deg, #f1a75a 0%, #f0775f 100%);
+    background: #f09b5b;
 
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -48,7 +48,7 @@ aside {
 }
 
 /*NOTE:  Photo ronde  */
-aside img {
+.photo {
     border-radius: 50%;
 }
 
@@ -108,9 +108,6 @@ aside img {
     padding: 15px;
 
     text-align: justify;
-
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
     border-radius: 10px;
     background-color: rgba(255, 255, 255, .35);
 
@@ -124,6 +121,75 @@ aside img {
 
     display: inline;
 }
+
+/*  <------  LOISIRS  --- */
+
+.loisirs {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-direction: row;
+    -ms-flex-pack: distribute;
+    justify-content: space-between;
+    /* HACK */
+
+    margin: 0 -5px;
+
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+.loisirs-mob {
+    display: block;
+    background-color: #f09b5b;
+    width: calc(100% + 30px)
+}
+
+.loisirs-desktop {
+    display: none;
+}
+
+.titre-loisirs {
+    background-color: #000;
+    color: #f09b5b;
+    padding: 10px 0 10px 0;
+    margin: 40px 0 20px 0;
+    font-size: 22px;
+    text-align: center;
+}
+
+.hobby {
+    /* HACK */
+    margin: 0 5px;
+    margin-bottom: 20px;
+
+}
+
+.hobby img {
+    height: auto;
+    width: 70px;
+    border: 2px solid white;
+}
+
+.hobby-name {
+    margin-top: 4px;
+
+    text-align: center;
+}
+
+/*NOTE: affichage masquage Loisir Mobile ou desktop*/
+.loisirs-mob {
+    display: none;
+}
+
+.loisirs-desktop {
+    display: block;
+}
+
+/*  >------  LOISIRS  --- */
 
 /* >------ VOLET LATERAL  ------ */
 
@@ -153,7 +219,7 @@ header h2 {
 }
 
 .name {
-    color: #f1a65b;
+    color: #f09b5b;
 }
 
 
@@ -180,7 +246,7 @@ header h2 {
     height: 3px;
     margin: 50px 0 50px 100px;
 
-    background: #f1a65b;
+    background-color: #f1a65b;
 }
 
 /* >------ HEADER ------ */
@@ -209,9 +275,6 @@ article {
 
 #experience,
 #formations,
-#outils,
-#loisirs,
-#divers,
 #recommandations {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -276,30 +339,8 @@ article {
     height: 60px;
 
     border-radius: 50%;
-    background-color: #f1a65b;
-}
-
-/*  NOTE: Attribution des couleurs dégraddées à chaque cerlcle picto*/
-.c1 {
-    background-color: #f1a75a;
-}
-
-.c2 {
     background-color: #f09b5b;
 }
-
-.c3 {
-    background-color: #f08f5c;
-}
-
-.c4 {
-    background-color: #f0835d;
-}
-
-.c5 {
-    background-color: #f0775f;
-}
-
 
 /* NOTE: Picto Font Awesome toujours au dessus du cercle*/
 .fa {
@@ -349,7 +390,7 @@ section {
     font-style: normal;
     line-height: 23px;
 
-    color: #f0755f;
+    color: #f09b5b;
 }
 
 .diplome strong {
@@ -374,10 +415,8 @@ section {
     padding: 4px 8px 4px 8px;
 
     color: black;
-    -webkit-border-radius: 13px;
-    -moz-border-radius: 13px;
     border-radius: 13px;
-    background: #f1a75a;
+    background-color: #f09b5b;
 
     -ms-border-radius: 13px;
     -o-border-radius: 13px;
@@ -408,141 +447,7 @@ section {
 
 /*  >------  XP / FORMATIONS  --- */
 
-/*  <------  OUTILS  --- */
-
-.all-app {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -ms-flex-flow: row wrap;
-    flex-flow: row wrap;
-}
-
-.cat {
-    margin: 0 10px 0 0;
-}
-
-.tools-title {
-    font-size: 16px;
-    font-weight: 400;
-
-    margin-bottom: 6px;
-    padding: 6px;
-
-    text-align: center;
-
-    color: #fff;
-    background-color: #1182a2;
-
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-}
-
-.apps {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    /* HACK  pour espace entre items sans espace sur extrémité  */
-
-    margin: 0 -5px;
-    margin-bottom: 20px;
-
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -ms-flex-flow: row nowrap;
-    flex-flow: row nowrap;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-}
-
-.apps img {
-    /* HACK */
-    margin: 0 5px;
-}
-
-/*  >------  OUTILS  --- */
-
-/*  <------  LOISIRS  --- */
-
-.hobbies {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    flex-direction: row;
-    /* HACK */
-
-    margin: 0 -5px;
-
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: row;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-}
-
-.hobby {
-    /* HACK */
-    margin: 0 5px;
-    margin-bottom: 20px;
-}
-
-.hobby-name {
-    margin-top: 4px;
-
-    text-align: center;
-}
-
-/*  >------  LOISIRS  --- */
-
-/*  <------  DIVERS  --- */
-
-.misc {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    flex-direction: row;
-
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: row;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-}
-
-.language {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-
-    margin-right: 35px;
-    margin-bottom: 20px;
-}
-
-.language-name {
-    font-weight: 300;
-
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    flex-direction: column;
-
-    width: 90px;
-
-    text-align: center;
-
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-}
-
-.language-name strong {
-    font-size: 35px;
-}
+/*  <------  RECOMMANDATIONS  --- */
 
 .recos {
     font-size: 18px;
@@ -563,8 +468,6 @@ section {
     margin-right: 90px;
     margin-bottom: 30px;
 }
-
-/* >------  DIVERS  --- */
 
 /* >------ MAIN --- */
 
@@ -657,6 +560,14 @@ section {
     .year {
         left: -63px;
     }
+
+    .loisirs-mob {
+        display: none;
+    }
+
+    .loisirs-desktop {
+        display: block;
+    }
 }
 
 /* Mobile */
@@ -726,6 +637,10 @@ section {
         margin: 5px;
     }
 
+    .title-article h3 {
+        font-size: 30px;
+    }
+
     .picto {
         display: none;
     }
@@ -736,10 +651,23 @@ section {
 
     #experience,
     #formations,
-    #outils,
-    #loisirs,
-    #divers,
     #recommandations {
         margin-left: 60px;
+    }
+
+    .loisirs-mob {
+        display: block;
+    }
+
+    .loisirs-desktop {
+        display: none;
+    }
+
+    .titre-loisirs {
+        margin: 0px 0 20px 0;
+    }
+
+    .loisirs {
+        margin: 0 40px 0 40px;
     }
 }
