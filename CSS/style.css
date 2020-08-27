@@ -4,45 +4,60 @@
 }
 
 body {
-    /*NOTE:  pour compenser la largeur du padding des 2 cotés*/
-    width: calc(100% - 40px);
-    margin: 0;
-    font-family: "Roboto", serif;
-    font-style: normal;
+    font-family: 'Roboto', serif;
     font-weight: 400;
-    color: black;
+    font-style: normal;
+
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     flex-direction: row;
+    /*NOTE:  pour compenser la largeur du padding des 2 cotés*/
+
+    margin: 0;
+
+    color: #000;
+
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
 }
 
 /*  <--- VOLET LATERAL --- */
 
 aside {
-    background: -webkit-gradient(linear, left top, left bottom, from(#F1A75A), to(#F0775F));
-    background: linear-gradient(180deg, #F1A75A 0%, #F0775F 100%);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-direction: column;
+
     width: 380px;
     padding: 30px;
 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     text-align: center;
 
+    background: -webkit-gradient(linear, left top, left bottom, from(#f1a75a), to(#f0775f));
+    background: linear-gradient(180deg, #f1a75a 0%, #f0775f 100%);
 
-    /* DEBUG  Masque la barre latérale  */
-    /*    display: none;*/
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
 }
 
+/*NOTE:  Photo ronde  */
 aside img {
     border-radius: 50%;
 }
 
-
-
 .identite {
-    color: white;
-    text-align: center;
     font-size: 27px;
+
+    text-align: center;
+
+    color: white;
 }
 
 .linkedin {
@@ -57,6 +72,7 @@ aside img {
 .identite a:link,
 .identite a:visited {
     text-decoration: none;
+
     color: white;
 }
 
@@ -72,38 +88,46 @@ aside img {
 }
 
 .contact-mob {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     flex-direction: row;
+
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
 }
 
 .intro {
-    text-align: justify;
-    background-color: rgba(255, 255, 255, 0.35);
-
-    padding: 15px;
     margin-top: 30px;
+    padding: 15px;
 
-    border-radius: 10px;
+    text-align: justify;
+
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, .35);
+
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
 }
 
 .intro p {
-    /* supprime les espaces top et bottom par defaut du <p> */
-    display: inline;
     font-size: 16px;
+    /* supprime les espaces top et bottom par défaut du <p> */
+
+    display: inline;
 }
 
 /* >------ VOLET LATERAL  ------ */
 
-
 /* <------ HEADER ------ */
-
-
 
 /* NOTE: Header version mobile placé avant la photo*/
 .header-mobile {
@@ -111,8 +135,9 @@ aside img {
 }
 
 .header-mobile h2 {
-    margin-bottom: 15px;
     font-size: 35px;
+
+    margin-bottom: 15px;
 }
 
 h2 {
@@ -123,26 +148,25 @@ h2 {
     margin-left: 100px;
 }
 
-.title h3 {
-    font-weight: 400;
-    margin-bottom: 10px;
+header h2 {
+    font-size: 60px;
 }
-
 
 .name {
-    font-size: 60px;
-    color: #F1A65B;
+    color: #f1a65b;
 }
 
+
 .job {
-    font-size: 60px;
     font-weight: 300;
 }
 
 .name-mob {
     font-size: 28px;
-    color: white;
+
     margin-bottom: 8px;
+
+    color: white;
 }
 
 .job-mob {
@@ -152,11 +176,11 @@ h2 {
 
 
 .separateur {
-    height: 3px;
     width: 540px;
-    background: #F1A65B;
-
+    height: 3px;
     margin: 50px 0 50px 100px;
+
+    background: #f1a65b;
 }
 
 /* >------ HEADER ------ */
@@ -173,12 +197,14 @@ article {
 }
 
 .filet-horizontal {
+    position: absolute;
+    top: 9px;
+    left: -20px;
+
     width: 15px;
     height: 3px;
-    background-color: #9C9C9C;
-    position: absolute;
-    left: -20px;
-    top: 9px;
+
+    background-color: #9c9c9c;
 }
 
 #experience,
@@ -190,122 +216,124 @@ article {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    flex-direction: column;
+
+    margin-left: 100px;
+
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
-    flex-direction: column;
-    margin-left: 100px;
 }
 
 /*  <------  XP / FORMATIONS  --- */
 
 .title-article {
+    position: relative;
+
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    flex-direction: row;
+
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
     -ms-flex-direction: row;
-    flex-direction: row;
-
-    position: relative;
 }
 
 .title-article h3 {
-    color: #000;
     font-size: 35px;
     font-weight: 300;
+
     margin: 15px 0 30px 0;
+
+    color: #000;
 }
 
 .picto {
     position: absolute;
+    top: 15px;
+    left: -75px;
+
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+
+    width: 60px;
+
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-
-    width: 60px;
-    left: -75px;
-    top: 15px
 }
 
 .cercle {
     position: absolute;
+    z-index: 1;
+
     width: 60px;
     height: 60px;
 
-    background-color: #F1A65B;
-
     border-radius: 50%;
-
-    z-index: 1;
+    background-color: #f1a65b;
 }
 
 /*  NOTE: Attribution des couleurs dégraddées à chaque cerlcle picto*/
 .c1 {
-    background-color: #F1A75A;
+    background-color: #f1a75a;
 }
 
 .c2 {
-    background-color: #F09B5B;
+    background-color: #f09b5b;
 }
 
 .c3 {
-    background-color: #F08F5C;
+    background-color: #f08f5c;
 }
 
 .c4 {
-    background-color: #F0835D;
+    background-color: #f0835d;
 }
 
 .c5 {
-    background-color: #F0775F;
+    background-color: #f0775f;
 }
 
 
 /* NOTE: Picto Font Awesome toujours au dessus du cercle*/
 .fa {
     z-index: 2;
+
     color: white;
 }
 
 /*NOTE:  Pictos > alternative avec fichiers images svg*/
 .picto img {
     position: relative;
+    z-index: 2;
+
     width: 40px;
     height: 40px;
-    z-index: 2;
 }
 
-.xp,
-.formation {
+section {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    flex-direction: column;
+
+    margin-bottom: 10px;
+
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
-    flex-direction: column;
-    margin-bottom: 10px;
 }
-
-/*FIXME Mettre fond transparent ou supprimer*/
-/*
-.xp:nth-child(2) {
-    background-color: #1182A2;
-    padding: 5px;
-}
-*/
 
 .year {
     position: absolute;
     left: -63px;
+
     color: black;
 }
 
@@ -316,11 +344,12 @@ article {
 
 .poste,
 .diplome {
-    font-style: normal;
-    font-weight: 400;
     font-size: 20px;
+    font-weight: 400;
+    font-style: normal;
     line-height: 23px;
-    color: #F0755F;
+
+    color: #f0755f;
 }
 
 .diplome strong {
@@ -328,56 +357,53 @@ article {
 }
 
 .groupe-ypt {
+    position: relative;
+
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: row;
-    flex-direction: row;
-    -webkit-box-pack: start;
-    -ms-flex-pack: start;
-    justify-content: flex-start;
-
-    position: relative;
 }
 
 .time {
-    display: inline;
-    color: black;
-    padding: 4px 8px 4px 8px;
-    margin-left: 15px;
-    background: #F1A75A;
-    border-radius: 13px;
-    -webkit-border-radius: 13px;
-    -moz-border-radius: 13px;
-    -ms-border-radius: 13px;
-    -o-border-radius: 13px;
-
     position: relative;
     bottom: 3px;
+
+    display: inline;
+
+    margin-left: 15px;
+    padding: 4px 8px 4px 8px;
+
+    color: black;
+    -webkit-border-radius: 13px;
+    -moz-border-radius: 13px;
+    border-radius: 13px;
+    background: #f1a75a;
+
+    -ms-border-radius: 13px;
+    -o-border-radius: 13px;
 }
 
 .compagny,
 .school {
-    font-weight: 700;
     font-size: 18px;
+    font-weight: 700;
     line-height: 21px;
 }
 
 .city {
-    font-weight: 300;
     font-size: 18px;
-    line-height: 21px;
+    font-weight: 300;
 }
 
 .tasks {
     font-size: 15px;
-    line-height: 18px;
-    text-align: justify;
-    color: #9C9C9C;
+    line-height: 20px;
 
     margin: 10px 0 15px 0;
+
+    text-align: justify;
+
+    color: #9c9c9c;
 }
 
 /*  >------  XP / FORMATIONS  --- */
@@ -388,6 +414,7 @@ article {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
     -ms-flex-flow: row wrap;
@@ -399,23 +426,31 @@ article {
 }
 
 .tools-title {
-    background-color: #1182A2;
-    font-weight: 400;
     font-size: 16px;
-    text-align: center;
+    font-weight: 400;
+
+    margin-bottom: 6px;
     padding: 6px;
+
+    text-align: center;
+
+    color: #fff;
+    background-color: #1182a2;
+
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    color: #FFFFFF;
-
-    margin-bottom: 6px;
 }
 
 .apps {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    /* HACK  pour espace entre items sans espace sur extrémité  */
+
+    margin: 0 -5px;
+    margin-bottom: 20px;
+
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
     -ms-flex-flow: row nowrap;
@@ -423,10 +458,6 @@ article {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
-
-    /* HACK  pour espace entre items sans espace sur extrémité  */
-    margin: 0 -5px;
-    margin-bottom: 20px;
 }
 
 .apps img {
@@ -442,16 +473,16 @@ article {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    flex-direction: row;
+    /* HACK */
+
+    margin: 0 -5px;
+
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
     -ms-flex-direction: row;
-    flex-direction: row;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
-
-    /* HACK */
-    margin: 0 -5px;
-
 }
 
 .hobby {
@@ -461,8 +492,9 @@ article {
 }
 
 .hobby-name {
-    text-align: center;
     margin-top: 4px;
+
+    text-align: center;
 }
 
 /*  >------  LOISIRS  --- */
@@ -473,42 +505,38 @@ article {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    flex-direction: row;
+
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
     -ms-flex-direction: row;
-    flex-direction: row;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
 }
 
 .language {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+
     margin-right: 35px;
     margin-bottom: 20px;
 }
 
 .language-name {
-    width: 90px;
-    text-align: center;
     font-weight: 300;
 
     display: -webkit-box;
-
     display: -ms-flexbox;
-
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
     flex-direction: column;
-    -webkit-box-align: space-around;
-    -ms-flex-align: space-around;
-    align-items: space-around;
+
+    width: 90px;
+
+    text-align: center;
 
     -webkit-box-pack: center;
-
     -ms-flex-pack: center;
-
     justify-content: center;
 }
 
@@ -517,23 +545,28 @@ article {
 }
 
 .recos {
+    font-size: 18px;
+
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
 
-    font-size: 18px;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
 }
 
 .reco1 {
     margin-right: 90px;
     margin-bottom: 30px;
-
 }
 
 /* >------  DIVERS  --- */
 
 /* >------ MAIN --- */
-
 
 /* <------  MEDIA QUERIES ----*/
 
@@ -545,30 +578,27 @@ article {
     }
 
     .identite a:hover {
-        background-color: #1182A2;
+        -webkit-transition: background .5s ease;
+        transition: background .5s ease;
 
         border-radius: 6px;
-
-        -webkit-transition: background 0.5s ease;
-        -moz-transition: background 0.5s ease;
-        -ms-transition: background 0.5s ease;
-        -o-transition: background 0.5s ease;
-        transition: background 0.5s ease;
+        background-color: #1182a2;
     }
 
     /*NOTE: Hover off */
     .identite a {
-        background-color: transparent;
+        -webkit-transition: background .5s ease;
+        transition: background .5s ease;
 
-        -webkit-transition: background 0.5s ease;
-        -moz-transition: background 0.5s ease;
-        -ms-transition: background 0.5s ease;
-        -o-transition: background 0.5s ease;
-        transition: background 0.5s ease;
+        background-color: transparent;
     }
 
     aside img {
         width: 250px;
+    }
+
+    header h2 {
+        font-size: 60px;
     }
 
     .mail-mob,
@@ -588,20 +618,15 @@ article {
     .picto {
         display: inherit;
     }
-
 }
 
 /* Tablette */
 
 @media all and (max-width: 1024px) {
-
     .intro p {
         font-size: 16px;
     }
 
-    main {
-        margin: 20px;
-    }
 
     aside {
         width: 300px;
@@ -621,6 +646,14 @@ article {
         font-size: 15px;
     }
 
+    header h2 {
+        font-size: 50px;
+    }
+
+    main {
+        margin: 20px;
+    }
+
     .year {
         left: -63px;
     }
@@ -630,13 +663,20 @@ article {
 
 @media all and (max-width: 480px) {
     body {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
         flex-direction: column;
+
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
     }
 
     .header-mobile {
-        margin-bottom: 35px;
         display: block;
+
+        margin-bottom: 35px;
     }
 
     .filet-vertical {
@@ -648,8 +688,15 @@ article {
     }
 
     aside {
-        width: 100%;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+
+        width: calc(100% - 30px);
+        padding: 30px;
+
+        -webkit-box-align: center;
+        -ms-flex-align: center;
         align-items: center;
     }
 
@@ -695,5 +742,4 @@ article {
     #recommandations {
         margin-left: 60px;
     }
-
 }
