@@ -3,32 +3,26 @@
     font-family: 'Roboto', 'Arial', sans-serif;
 }
 
-/* <------ root --- */
-html,
 body {
     font-family: 'Roboto', serif;
     font-weight: 400;
     font-style: normal;
     font-size: 16px;
 
-    margin: 0;
-
-    color: #000;
-}
-
-body {
-
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     flex-direction: row;
-
     /*NOTE:  pour compenser la largeur du padding des 2 cotés*/
+
+    margin: 0;
+
+    color: #000;
+
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
     -ms-flex-direction: row;
-
-    width: calc(100% - 30px);
+    -ms-flex-direction: row;
 }
 
 /*  <--- VOLET LATERAL --- */
@@ -39,8 +33,8 @@ aside {
     display: flex;
     flex-direction: column;
 
-    width: 23rem;
-    padding: 2rem;
+    width: 380px;
+    padding: 30px;
 
     text-align: center;
 
@@ -60,7 +54,7 @@ aside {
 }
 
 .identite {
-    font-size: 1.6rem;
+    font-size: 27px;
 
     text-align: center;
 
@@ -68,11 +62,11 @@ aside {
 }
 
 .linkedin {
-    margin-top: 1.5rem;
+    margin-top: 25px;
 }
 
 .linkedin {
-    font-size: 1.2rem;
+    font-size: 19px;
 }
 
 
@@ -115,14 +109,15 @@ aside {
     padding: 15px;
 
     text-align: justify;
-    background-color: rgba(255, 255, 255, .35);
     border-radius: 10px;
+    background-color: rgba(255, 255, 255, .35);
+
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
 }
 
 .intro p {
-    font-size: 1rem;
+    font-size: 16px;
     /* supprime les espaces top et bottom par défaut du <p> */
 
     display: inline;
@@ -139,7 +134,7 @@ aside {
     justify-content: space-between;
     /* HACK */
 
-    margin: 0 -0.31rem;
+    margin: 0 -5px;
 
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -217,17 +212,17 @@ h2 {
 }
 
 .title {
-    display: inline-block;
-    /*    min-width: 250px;*/
+    margin-left: 100px;
 }
 
-.title h2 {
-    font-size: 3.75rem;
+header h2 {
+    font-size: 60px;
 }
 
 .name {
     color: #f09b5b;
 }
+
 
 .job {
     font-weight: 300;
@@ -246,9 +241,11 @@ h2 {
     font-weight: 300;
 }
 
+
 .separateur {
+    width: 540px;
     height: 3px;
-    margin: 50px 0 50px 0;
+    margin: 50px 0 50px 100px;
 
     background-color: #f1a65b;
 }
@@ -258,7 +255,7 @@ h2 {
 /* <------ MAIN --- */
 
 main {
-    margin: 2rem;
+    margin: 30px;
 }
 
 /*NOTE: espaces entre articles*/
@@ -289,16 +286,11 @@ article h4 {
     display: flex;
     flex-direction: column;
 
+    margin-left: 100px;
+
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
-}
-
-#experience,
-#formations,
-#recommandations,
-.title {
-    margin-left: 100px;
 }
 
 /*  <------  XP / FORMATIONS  --- */
@@ -348,8 +340,8 @@ article h4 {
     position: absolute;
     z-index: 1;
 
-    width: 3.75em;
-    height: 3.75em;
+    width: 60px;
+    height: 60px;
 
     border-radius: 50%;
     background-color: #f09b5b;
@@ -358,6 +350,7 @@ article h4 {
 /* NOTE: Picto Font Awesome toujours au dessus du cercle*/
 .fa {
     z-index: 2;
+
     color: white;
 }
 
@@ -512,7 +505,7 @@ section {
         width: 250px;
     }
 
-    .title h2 {
+    header h2 {
         font-size: 60px;
     }
 
@@ -542,6 +535,7 @@ section {
         font-size: 16px;
     }
 
+
     aside {
         width: 300px;
         padding: 20px;
@@ -551,6 +545,7 @@ section {
         width: 200px;
     }
 
+
     .identite {
         font-size: 22px;
     }
@@ -559,29 +554,12 @@ section {
         font-size: 15px;
     }
 
-    .title {
-        display: inline-block;
+    header h2 {
+        font-size: 50px;
     }
 
-    .title h2 {
-        font-size: 2.8rem;
-    }
-
-    main {
-        margin: 1.3rem;
-        min-width: 350px;
-    }
-
-    .separateur {
-        margin: 2.1em 0;
-        width: 25.5em;
-    }
-
-    #experience,
-    #formations,
-    #recommandations,
-    .title {
-        margin-left: 80px;
+    text main {
+        margin: 20px;
     }
 
     .year {
@@ -597,25 +575,9 @@ section {
     }
 }
 
-/* Tablette-portrait */
+/* Mobile */
 
-@media all and (max-width: 800px) {
-    .title {
-        display: inline-block;
-    }
-
-    .title h2 {
-        font-size: 2.2rem;
-    }
-
-    .title-article h3 {
-        font-size: 1.7rem;
-    }
-}
-
-
-/* Tablette-portrait 2 */
-@media all and (max-width: 740px) {
+@media all and (max-width: 480px) {
     body {
         display: -webkit-box;
         display: -ms-flexbox;
@@ -669,15 +631,15 @@ section {
     }
 
     .intro p {
-        font-size: 1.1em;
+        font-size: 18px;
     }
 
-    .title {
+    header {
         display: none;
     }
 
     main {
-        margin: 2rem 0.5rem;
+        margin: 5px;
     }
 
     .title-article h3 {
@@ -694,56 +656,7 @@ section {
 
     #experience,
     #formations,
-    #recommandations,
-    .title {
-        margin-left: 60px;
-    }
-
-    .loisirs-mob {
-        display: block;
-    }
-
-    .loisirs-desktop {
-        display: none;
-    }
-
-    .titre-loisirs {
-        margin: 0px 0 20px 0;
-    }
-
-    .loisirs {
-        margin: 0 40px 0 40px;
-    }
-}
-
-
-/* Mobile */
-
-@media all and (max-width: 480px) {
-    .title {
-        display: none;
-    }
-
-    main {
-        margin: 2rem 0.5rem;
-    }
-
-    .title-article h3 {
-        font-size: 30px;
-    }
-
-    .picto {
-        display: none;
-    }
-
-    .year {
-        left: -50px;
-    }
-
-    #experience,
-    #formations,
-    #recommandations,
-    .title {
+    #recommandations {
         margin-left: 60px;
     }
 
